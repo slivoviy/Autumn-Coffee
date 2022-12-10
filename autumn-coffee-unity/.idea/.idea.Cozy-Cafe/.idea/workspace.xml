@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="691219c0-77fb-4900-8c4e-9c5bd59330e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneLinux64.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/ArticyEditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/ArticyEditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Customers/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Customers/Customer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Customers/CustomersSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Customers/CustomersSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GameplaySceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GameplaySceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/AnimationPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/AnimationPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneTransition/SceneTransition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneTransition/SceneTransition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="RestartYC &lt;neo61483@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialogueSystem/DialogueManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/BranchSelector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Customers/MoodSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TasksSystem/Task.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/ScriptableObject/ItemSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Customers/SpecialCustomerData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Customers/SpecialCustomerSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TasksSystem/TaskManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Customers/RandomCustomer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TasksSystem/ReviewsSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menu/GameUI/ClockUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/WeekSystem/DayLogic.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ruinum.Utils/RandomExtentions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ruinum.Core/Managers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/ScriptableObjects/SpecialCustomerSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/WeekSystem/WeekSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Customers/SpecialCustomer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/DialogueManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MoneySystem/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MoneySystem/TrashCan.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Customers/CustomersSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Customers/Customer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/GameplaySceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneTransition/SceneTransition.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2EaToVN555f5qrZtn5XYRbVOu32" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\Cozy-Cafe.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\s0111\Unity Projects\cozy-cafe_unity\Cozy-Cafe\Builds" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Imported Articy package, started working on dialogue system" />
+    <MESSAGE value="cherry-picked from master" />
+    <MESSAGE value="Initialization of dialogue when customer is spawned" />
+    <MESSAGE value="Work in progress" />
+    <MESSAGE value="Finalized feature" />
+    <MESSAGE value="hotfix" />
+    <MESSAGE value="Add:&#10;- MoodSystem" />
+    <MESSAGE value="Change:&#10;- Customers&#10;- ItemSO" />
+    <MESSAGE value="In work:&#10;- Customer&#10;- SpecialCustomer&#10;- CustomersSystem&#10;- TaskManager&#10;- SpecialCustomerSO" />
+    <MESSAGE value="In work:&#10;- CustomersSystem" />
+    <MESSAGE value="Add:&#10;- Articy Database" />
+    <MESSAGE value="Change:&#10;- many stuff" />
+    <MESSAGE value="Finish:&#10;- I hope everything" />
+    <MESSAGE value="Finish:&#10;- Finally" />
+    <MESSAGE value="Last commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="268" y="0" key="CommitChangelistDialog2" timestamp="1662842278959">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="268" y="0" key="CommitChangelistDialog2/0.0.1280.672@0.0.1280.672" timestamp="1662842278959" />
+    <state x="-2" y="0" width="1267" height="662" key="MergeDialog" timestamp="1663889995928">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="-2" y="0" width="1267" height="662" key="MergeDialog/0.0.1280.672@0.0.1280.672" timestamp="1663889995928" />
+    <state x="223" y="101" width="835" height="476" key="MultipleFileMergeDialog" timestamp="1663885867878">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="223" y="101" width="835" height="476" key="MultipleFileMergeDialog/0.0.1280.672@0.0.1280.672" timestamp="1663885867878" />
+    <state x="280" y="105" key="MultipleFileMergeDialog/0.0.1280.720@0.0.1280.720" timestamp="1663371741691" />
+    <state x="441" y="38" key="RiderGenerateDialog" timestamp="1663635852514">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="441" y="38" key="RiderGenerateDialog/0.0.1280.672@0.0.1280.672" timestamp="1663635852514" />
+    <state x="404" y="71" key="RollbackChangesDialog" timestamp="1663371604650">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="404" y="71" key="RollbackChangesDialog/0.0.1280.720@0.0.1280.720" timestamp="1663371604650" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1663371488067">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.672@0.0.1280.672" timestamp="1662899088638" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1663371488067" />
+    <state x="93" y="93" width="1095" height="487" key="VCS.FileHistoryDialog" timestamp="1663896017702">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="93" y="93" width="1095" height="487" key="VCS.FileHistoryDialog/0.0.1280.672@0.0.1280.672" timestamp="1663896017702" />
+    <state x="233" y="70" key="Vcs.Push.Dialog.v2" timestamp="1663921298159">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="233" y="70" key="Vcs.Push.Dialog.v2/0.0.1280.672@0.0.1280.672" timestamp="1663921298159" />
+    <state x="93" y="93" width="1095" height="487" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1663910814660">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="93" y="93" width="1095" height="487" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.672@0.0.1280.672" timestamp="1663910814660" />
+    <state x="458" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1663914378147">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="458" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.672@0.0.1280.672" timestamp="1663914378147" />
+    <state x="458" y="275" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1663355490387" />
+    <state x="303" y="0" width="672" height="678" key="search.everywhere.popup" timestamp="1663915060432">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="303" y="0" width="672" height="678" key="search.everywhere.popup/0.0.1280.672@0.0.1280.672" timestamp="1663915060432" />
+  </component>
+</project>

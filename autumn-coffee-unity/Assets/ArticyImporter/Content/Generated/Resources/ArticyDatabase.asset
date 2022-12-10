@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-821170696737567693
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70633ffc0aeda4b41b9895d178a4749a, type: 3}
+  m_Name: DefaultGlobalVariables
+  m_EditorClassIdentifier: 
+  BoolVariableCache:
+  - mFullQualifiedName: BaristaFriend.OrderDoneCorrectly
+    mVar:
+      values: 00
+  - mFullQualifiedName: Reviewer.OrderDoneCorrectly
+    mVar:
+      values: 00
+  - mFullQualifiedName: KindOldMan.AgreedToListen
+    mVar:
+      values: 00
+  - mFullQualifiedName: TiredClerk.GetNewJob
+    mVar:
+      values: 00
+  IntVariableCache:
+  - mFullQualifiedName: GlobalGlobalVariables.CafeRating
+    mVar:
+      values: 64000000
+  StringVariableCache: []
+  LiveBoolVariableCache: []
+  LiveIntVariableCache: []
+  LiveStringVariableCache: []
+  isInitialized: 1
+  mBaristaFriend:
+    _VariableStorage: {fileID: -821170696737567693}
+  mGlobalGlobalVariables:
+    _VariableStorage: {fileID: -821170696737567693}
+  mReviewer:
+    _VariableStorage: {fileID: -821170696737567693}
+  mKindOldMan:
+    _VariableStorage: {fileID: -821170696737567693}
+  mTiredClerk:
+    _VariableStorage: {fileID: -821170696737567693}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ArticyDatabase
+  m_EditorClassIdentifier: 
+  mHierarchy: {fileID: 9172886991244074201}
+  mLocalization: {fileID: 8929128399079838041}
+  mInternalProject:
+    mName: cozy-cafe_atricy
+    mDetailName: 
+    mId: 064105a3-cb7a-4070-950b-b42e0f558499
+    mTechnicalName: Cozy_Cafe_atricy
+  mImportedAssets: []
+  mDefaultGlobalVariables: {fileID: -821170696737567693}
+  mScriptFragments: {fileID: 1735056652536356282}
+  mPackages:
+  - PackageName: All objects
+    PackagePath: All objects
+    mIsDefaultPackage: 1
+--- !u!114 &1735056652536356282
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d15ecf049bd5ce49a3a434fb3cf96b6, type: 3}
+  m_Name: ArticyScriptFragments
+  m_EditorClassIdentifier: 
+--- !u!114 &8929128399079838041
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1174674681, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LocalizationManager
+  m_EditorClassIdentifier: 
+  OnLanguageChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  mUseLocalization: 0
+  mLanguage: en
+  mThrowOnMissingText: 0
+  mClearOnLanguageSwitch: 1
+  mExportLanguage: en
+--- !u!114 &9172886991244074201
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: HierarchyManager
+  m_EditorClassIdentifier: 
+  serializedNodes:
+  - id: 72057594037927937
+    parent: 0
+    technicalName: Cozy_Cafe_atricy
+    articyType: Project
+    childCount: 0
+    indexOfFirstChild: 1
