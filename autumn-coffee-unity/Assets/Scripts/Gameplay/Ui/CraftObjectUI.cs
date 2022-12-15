@@ -37,7 +37,7 @@ public class CraftObjectUI : MonoBehaviour
 
         CreateIcons(_currentObject.GetItems());
         CreateIcons(_currentObject.GetSyrups());
-        CreateIcons(_currentObject.GetPoddings());
+        CreateIcons(_currentObject.GetToppings());
     }
 
     private void Hide()
@@ -57,7 +57,7 @@ public class CraftObjectUI : MonoBehaviour
         for (int i = 0; i < list.Count; i++)
         {
             var createdIcon = Instantiate(_itemIcon, _createdLayout.transform);
-            createdIcon.GetComponent<Image>().sprite = list[i].Icon;
+            createdIcon.GetComponent<Image>().sprite = list[i].icon;
 
             _createdItemIcons.Add(createdIcon);
         }

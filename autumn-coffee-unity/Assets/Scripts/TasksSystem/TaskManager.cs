@@ -1,63 +1,48 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-
 using Ruinum.Utils;
 using Ruinum.Core;
 
 
-public class TaskManager : BaseSingleton<TaskManager>
-{
-    private List<ScriptableObject> Coffee = new List<ScriptableObject>();
-    private List<ScriptableObject> Items = new List<ScriptableObject>();
-    [Range(1, 3)] private int TasksNum = 1;
+public class TaskManager : BaseSingleton<TaskManager> {
+    private readonly List<ScriptableObject> _coffee = new List<ScriptableObject>();
+    private readonly List<ScriptableObject> _items = new List<ScriptableObject>();
 
-    private void Start()
-    {
-        Coffee.AddRange(Resources.LoadAll<ScriptableObject>("ScriptableObjects/Items/Drinks"));
+    private void Start() {
+        _coffee.AddRange(Resources.LoadAll<ScriptableObject>("ScriptableObjects/Items/Drinks"));
 
-        Items.AddRange(Resources.LoadAll<ScriptableObject>("ScriptableObjects/Items/Dishes"));
-        Items.AddRange(Resources.LoadAll<ScriptableObject>("ScriptableObjects/Items/Syrups"));
-        Items.AddRange(Resources.LoadAll<ScriptableObject>("ScriptableObjects/Items/Toppings"));
+        _items.AddRange(Resources.LoadAll<ScriptableObject>("ScriptableObjects/Items/Desserts"));
+        _items.AddRange(Resources.LoadAll<ScriptableObject>("ScriptableObjects/Items/Syrups"));
+        _items.AddRange(Resources.LoadAll<ScriptableObject>("ScriptableObjects/Items/Toppings"));
     }
+    
+    public Task CreateTask(Customer customer) {
+        var task = new Task();
+        task.Owner(customer);
+        var difficulty = GetDifficulty();
 
-    int hardest; //1-3 repeats
-    public Task CreateTask(Customer customer)
-    {
-        Task _task = new Task();
-        _task.Owner(customer);
-        hardest = GiveDifficult();
+        task.Order.Add(AddItem(_coffee));
 
-        _task.Dish.Add(new Dish());
-        _task.Dish[0].Item = AddItem(Coffee);
-
-        for (int i = 1; i <= hardest; i++)
-        {
-            _task.Dish.Add(new Dish());
-            _task.Dish[i].Item = AddItem(Items);
+        for (var i = 1; i < difficulty; i++) {
+            ItemSO item;
+            do {
+                item = AddItem(_items);
+            } while(task.Order.Any(it => it.type == item.type));
+            
+            task.Order.Add(item);
         }
-        _task.TskNum = TasksNum;
-        TasksNum++;
-        return _task;
+
+        return task;
     }
 
-    public ItemSO AddItem(List<ScriptableObject> items)
-    {
+    private static ItemSO AddItem(List<ScriptableObject> items) {
         return (ItemSO)RandomExtentions.RandomList(items);
     }
 
-    private int GiveDifficult()
-    {
-        if (RandomExtentions.RandomLess(0.8f))
-        {
-            return 1;
-        }else if (RandomExtentions.RandomLess(0.5f))
-        {
-            return 2;
-        }
-        else
-        {
-            return 3;
-        }
+    private static int GetDifficulty() {
+        if (RandomExtentions.RandomLess(0.8f)) return 1;
+
+        return RandomExtentions.RandomLess(0.5f) ? 2 : 3;
     }
 }
-

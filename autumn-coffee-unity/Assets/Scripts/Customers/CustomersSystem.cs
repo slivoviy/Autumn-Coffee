@@ -37,31 +37,31 @@ public class CustomersSystem : BaseSingleton<CustomersSystem> {
 
     private GameObject GetCustomer() {
         if (TodaySpecialCustomers == null || TodaySpecialCustomers.Count == 0)
-            return Resources.Load<GameObject>("Prefabs/CustomerTest");
+            return Resources.Load<GameObject>("Prefabs/Customer");
 
         if (!RandomExtentions.RandomLess(spawningProbability)) {
             specialExists = true;
-            GameObject customer = TodaySpecialCustomers[0];
+            var customer = TodaySpecialCustomers[0];
             TodaySpecialCustomers.Remove(customer);
 
-            if (spawningProbability > 0.4f) spawningProbability -= 0.4f;
+            spawningProbability = 0f;
 
             return customer;
         }
 
-        spawningProbability += 0.1f;
-        return Resources.Load<GameObject>("Prefabs/CustomerTest");
+        spawningProbability += 0.2f;
+        return Resources.Load<GameObject>("Prefabs/Customer");
     }
 
     private void CreateNewCustomer() {
-        GameObject customerGO = Instantiate(GetCustomer(), null);
-        int cPos = 1;
-        for (int i = 0; i < 3; i++) {
-            if (!Place[i]) {
-                cPos = i;
-                Place[i] = true;
-                break;
-            }
+        var customerGO = Instantiate(GetCustomer(), null);
+        var cPos = 1;
+        for (var i = 0; i < 3; i++) {
+            if (Place[i]) continue;
+            
+            cPos = i;
+            Place[i] = true;
+            break;
         }
 
         customerGO.transform.position = startPos2;
@@ -69,11 +69,11 @@ public class CustomersSystem : BaseSingleton<CustomersSystem> {
         customer._Pos = cPos;
 
         customersCount++;
-        ComeAnimation2(customerGO, startPos + ((transform.right * 4.5f) * cPos));
+        ComeAnimation(customerGO, startPos + (transform.right * (4.5f * cPos)));
     }
 
-    private static void ComeAnimation2(GameObject @object, Vector3 _Pos) {
-        Sequence mySequence = DOTween.Sequence();
+    private static void ComeAnimation(GameObject @object, Vector3 _Pos) {
+        var mySequence = DOTween.Sequence();
 
         mySequence.Append(@object.transform.DOMove(_Pos, 1));
         mySequence.Append(@object.transform.DOPunchScale(new Vector3(.2f, .2f, .2f), 0.25f));

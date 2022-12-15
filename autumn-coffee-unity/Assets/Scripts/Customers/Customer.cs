@@ -1,11 +1,12 @@
+using System;
 using System.Collections.Generic;
 using Articy.Unity;
 using UnityEngine;
 using Ruinum.Core;
 using TMPro;
+using Random = UnityEngine.Random;
 
-public class Customer : Executable
-{
+public class Customer : Executable {
     public Task task;
     public float TimeToWait;
     public float MinChangeTime;
@@ -27,15 +28,13 @@ public class Customer : Executable
     private bool clicked;
 
 
-    public override void Execute()
-    {
+    public override void Execute() {
         if (clicked) {
             patienceMeter.sizeDelta = new Vector2(_timerToLeave.GetCurrentTime() / TimeToWait * 3, 0.5f);
         }
     }
 
-    protected virtual void AddTask()
-    {
+    protected virtual void AddTask() {
         if (_isTaskCreated) return;
 
         task = TaskManager.Singleton.CreateTask(this);
@@ -44,54 +43,51 @@ public class Customer : Executable
         InitializeTaskUI();
     }
 
-    protected void InitializeTaskUI()
-    {
+    protected void InitializeTaskUI() {
         _orderBubble.SetActive(true);
+
         //0 - coffee; 1 - syrup; 2 - topping; 3-4 - dessert
-        bool hasDessert = false;
-        foreach (var dish in task.Dish)
-        {
-            if (dish.Item.IsSyrup)
-            {
-                _bubbleTextComponents[1].gameObject.SetActive(true);
-                _bubbleTextComponents[1].text = "- " + dish.Item.Name;
-            }
-            else if (dish.Item.IsTopping)
-            {
-                _bubbleTextComponents[2].gameObject.SetActive(true);
-                _bubbleTextComponents[2].text = "- " + dish.Item.Name;
-            }
-            else if (dish.Item.IsDessert)
-            {
-                if (!hasDessert)
-                {
-                    _bubbleTextComponents[3].gameObject.SetActive(true);
-                    _bubbleTextComponents[3].text = dish.Item.Name;
-                    hasDessert = true;
-                }
-                else
-                {
-                    _bubbleTextComponents[4].gameObject.SetActive(true);
-                    _bubbleTextComponents[4].text = dish.Item.Name;
-                }
-            }
-            else
-            {
-                _bubbleTextComponents[0].gameObject.SetActive(true);
-                _bubbleTextComponents[0].text = dish.Item.Name;
+        var hasDessert = false;
+        foreach (var item in task.Order) {
+            switch (item.type) {
+                case ItemType.Coffee:
+                    _bubbleTextComponents[0].gameObject.SetActive(true);
+                    _bubbleTextComponents[0].text = item.itemName;
+                    break;
+                case ItemType.Syrup:
+                    _bubbleTextComponents[1].gameObject.SetActive(true);
+                    _bubbleTextComponents[1].text = "- " + item.itemName;
+                    break;
+                case ItemType.Topping:
+                    _bubbleTextComponents[2].gameObject.SetActive(true);
+                    _bubbleTextComponents[2].text = "- " + item.itemName;
+                    break;
+                case ItemType.Dessert:
+                    if (!hasDessert) {
+                        _bubbleTextComponents[3].gameObject.SetActive(true);
+                        _bubbleTextComponents[3].text = item.itemName;
+                        hasDessert = true;
+                    }
+                    else {
+                        _bubbleTextComponents[4].gameObject.SetActive(true);
+                        _bubbleTextComponents[4].text = item.itemName;
+                    }
+                    break;
+                default:
+                    Debug.Log("ItemType not found");
+                    break;
             }
         }
     }
 
-    public virtual void Leave()
-    {
-        ReviewsSystem.Singletone.ChangeRating(task.completed ? 2 : -2);
+    public virtual void TryLeave() {
+        if (!task.completed && _timerToLeave.GetCurrentTime() > 0) return;
+
         CustomersSystem.Singleton.CustomerLeave(gameObject);
 
-        int randomMoney = (int)(Random.Range(_minRandom, _maxRandom) + _constantMoney);
-        
-        if (task.completed) MoneySystem.Singleton.AddAmount(randomMoney);
-        else MoneySystem.Singleton.SubtractAmount(randomMoney);
+        var randomMoney = (int)(Random.Range(_minRandom, _maxRandom) + _constantMoney);
+
+        if (task.correct) MoneySystem.Singleton.AddAmount(randomMoney);
 
         GameManager.Singleton.RemoveExecuteObject(this);
 
@@ -100,10 +96,10 @@ public class Customer : Executable
 
     private void OnMouseDown() {
         clicked = true;
-        
+
         AddTask();
 
         TimeToWait += Random.Range(MinChangeTime, MaxChangeTime);
-        _timerToLeave = TimerManager.Singleton.StartTimer(TimeToWait, Leave);
+        _timerToLeave = TimerManager.Singleton.StartTimer(TimeToWait, TryLeave);
     }
 }

@@ -23,5 +23,5 @@ MonoBehaviour:
     referencingMode: 0
     lowId: 319
     highId: 16777216
-  ordersNumber: 0
-  hasSecondDialogue: 1
+  ordersNumber: 1
+  hasSecondDialogue: 0

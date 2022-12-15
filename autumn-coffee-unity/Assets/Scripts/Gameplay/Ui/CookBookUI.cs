@@ -15,7 +15,7 @@ public class CookBookUI : MonoBehaviour
 
     [SerializeField] private GameObject _itemUIPrefab;
 
-    [SerializeField] private ReceptSO[] _receptSOs;
+    [SerializeField] private RecipeSO[] _receptSOs;
 
     private List<GameObject> _createdRecepts = new List<GameObject>();
 
@@ -45,21 +45,21 @@ public class CookBookUI : MonoBehaviour
         SetInformation(_receptSOs[_index]);
     }
 
-    private void SetInformation(ReceptSO receptSO)
+    private void SetInformation(RecipeSO recipeSo)
     {
-        _image.sprite = receptSO.ResultItem.Icon;
-        _name.text = receptSO.ResultItem.Name;
-        _description.text = receptSO.ResultItem.Description;
+        _image.sprite = recipeSo.ResultItem.icon;
+        _name.text = recipeSo.ResultItem.itemName;
+        _description.text = recipeSo.ResultItem.description;
 
         for (int i = 0; i < _createdRecepts.Count; i++)
         {
             Destroy(_createdRecepts[i]);
         }
 
-        for (int i = 0; i < receptSO.RequestItems.Length; i++)
+        for (int i = 0; i < recipeSo.RequestItems.Length; i++)
         {
             var createdItemUI = Instantiate(_itemUIPrefab, _layoutGroup);
-            createdItemUI.GetComponent<Image>().sprite = receptSO.RequestItems[i].Icon;
+            createdItemUI.GetComponent<Image>().sprite = recipeSo.RequestItems[i].icon;
             _createdRecepts.Add(createdItemUI);
         }
     }

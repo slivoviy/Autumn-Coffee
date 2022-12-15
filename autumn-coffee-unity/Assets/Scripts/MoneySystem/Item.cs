@@ -2,36 +2,33 @@ using Ruinum.Utils;
 using UnityEngine;
 
 
-public partial class Item : AnimationObject
-{
+public partial class Item : AnimationObject {
     [SerializeField] private ItemSO _itemSO;
     [SerializeField] GameObject _hintCanvas;
 
     private Vector3 _startPosition;
 
-    private void Start()
-    {
+    private void Start() {
         _startPosition = transform.position;
 
         _hintCanvas.SetActive(false);
     }
 
-    private void OnMouseDown()
-    {
+    private void OnMouseDown() {
         gameObject.layer = 2;
     }
 
-    private void OnMouseDrag()
-    {
+    private void OnMouseDrag() {
         transform.position = new Vector3(MouseUtils.GetMouseWorld2DPosition().x, MouseUtils.GetMouseWorld2DPosition().y, transform.position.z);
     }
 
-    private void OnMouseUp()
-    {
-        if (!MouseUtils.TryRaycast2DToMousePosition(out var raycastHit2D)) { RefreshSettings(); return; }
-        
-        if (raycastHit2D.collider.TryGetComponent<CraftObject>(out var craftObject) && !_itemSO.IsDessert && craftObject.GetItems().Count < 4)
-        {
+    private void OnMouseUp() {
+        if (!MouseUtils.TryRaycast2DToMousePosition(out var raycastHit2D)) {
+            RefreshSettings();
+            return;
+        }
+
+        if (raycastHit2D.collider.TryGetComponent<CraftObject>(out var craftObject) && _itemSO.type != ItemType.Dessert && craftObject.GetItems().Count < 4) {
             craftObject.AddItem(_itemSO);
 
             AnimationPunch();
@@ -41,37 +38,34 @@ public partial class Item : AnimationObject
             RefreshSettings();
         }
 
-        if (raycastHit2D.collider.TryGetComponent<Customer>(out var customer))
-        {
+        if (raycastHit2D.collider.TryGetComponent<Customer>(out var customer)) {
             customer.task.AddItem(_itemSO);
 
             AnimationPunch();
 
-            MoneySystem.Singleton.SubtractAmount(_itemSO);
+            if(_itemSO.type != ItemType.Coffee) MoneySystem.Singleton.SubtractAmount(_itemSO);
 
             RefreshSettings();
+
+            customer.TryLeave();
         }
 
-        if (raycastHit2D.collider.TryGetComponent<TrashCan>(out var trash))
-        {
+        if (raycastHit2D.collider.TryGetComponent<TrashCan>(out var trash)) {
             Destroy(this);
         }
 
         RefreshSettings();
     }
 
-    private void OnMouseEnter()
-    {
+    private void OnMouseEnter() {
         _hintCanvas.SetActive(true);
     }
 
-    private void OnMouseExit()
-    {
+    private void OnMouseExit() {
         _hintCanvas.SetActive(false);
     }
 
-    private void RefreshSettings()
-    {
+    private void RefreshSettings() {
         transform.position = _startPosition;
         gameObject.layer = 0;
     }

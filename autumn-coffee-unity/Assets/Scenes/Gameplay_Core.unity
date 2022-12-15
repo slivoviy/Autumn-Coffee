@@ -2817,6 +2817,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 614171378, guid: 8f0d760365c07504db036a4d1b2abd06, type: 3}
+      propertyPath: _startTime
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 814456942590672641, guid: 8f0d760365c07504db036a4d1b2abd06, type: 3}
       propertyPath: m_Name
       value: Managers
@@ -2871,11 +2875,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 814456942590672699, guid: 8f0d760365c07504db036a4d1b2abd06, type: 3}
       propertyPath: maxTime
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 814456942590672699, guid: 8f0d760365c07504db036a4d1b2abd06, type: 3}
       propertyPath: minTime
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 814456942590672699, guid: 8f0d760365c07504db036a4d1b2abd06, type: 3}
       propertyPath: specialCustomersGO.Array.size
@@ -2915,6 +2919,9 @@ PrefabInstance:
       objectReference: {fileID: 958008268}
     m_RemovedComponents:
     - {fileID: 3654465977942332690, guid: 8f0d760365c07504db036a4d1b2abd06, type: 3}
+    - {fileID: 3125551328476597821, guid: 8f0d760365c07504db036a4d1b2abd06, type: 3}
+    - {fileID: 903195983598677159, guid: 8f0d760365c07504db036a4d1b2abd06, type: 3}
+    - {fileID: 814456942590672698, guid: 8f0d760365c07504db036a4d1b2abd06, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8f0d760365c07504db036a4d1b2abd06, type: 3}
 --- !u!1 &641522578
 GameObject:

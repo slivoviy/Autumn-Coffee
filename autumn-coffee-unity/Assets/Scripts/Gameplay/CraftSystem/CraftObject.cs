@@ -1,111 +1,108 @@
+using System;
 using Ruinum.Utils;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
-public class CraftObject : AnimationObject
-{
-    [SerializeField] private List<ReceptSO> _recepts;
+public class CraftObject : AnimationObject {
+    [SerializeField] private List<RecipeSO> recipes;
 
-    private List<ItemSO> _items = new List<ItemSO>();
-    private List<ItemSO> _syrups = new List<ItemSO>();
-    private List<ItemSO> _poddings = new List<ItemSO>();
+    private readonly List<ItemSO> _items = new List<ItemSO>();
+    private readonly List<ItemSO> _syrups = new List<ItemSO>();
+    private readonly List<ItemSO> _toppings = new List<ItemSO>();
 
-    private ItemSO _currentCofee;
+    private ItemSO _currentCoffee;
 
-    public void AddItem(ItemSO itemSO)
-    {
+    private void Start() {
+        _currentCoffee = ScriptableObject.CreateInstance<ItemSO>();
+        
+        // _currentCoffee = true;
+    }
+
+    public void AddItem(ItemSO itemSO) {
         AnimationPunch();
 
-        if (itemSO.IsSyrup) { _syrups.Add(itemSO); return; }
-        if (itemSO.IsTopping) { _poddings.Add(itemSO); return; }
+        if (itemSO.type == ItemType.Syrup) {
+            _syrups.Add(itemSO);
+            return;
+        }
+        if (itemSO.type == ItemType.Topping) {
+            _toppings.Add(itemSO);
+            return;
+        }
 
         _items.Add(itemSO);
     }
 
-    public void CraftCofee()
-    {       
-        for (int i = 0; i < _recepts.Count; i++)
-        {
-            var recept = _recepts[i];
-            if (recept.RequestItems.Length != _items.Count) continue;
-            int correctItems = 0;
-            for (int j = 0; j < recept.RequestItems.Length; j++)
-            {
-                if (recept.RequestItems[j] == _items[j]) correctItems++;
-            }
+    private void CraftCoffee() {
+        foreach (var recipe in recipes) {
+            if (recipe.RequestItems.Length != _items.Count) continue;
+            
+            var correctItems = recipe.RequestItems.Where((item, i) => item == _items[i]).Count();
 
-            if (correctItems == recept.RequestItems.Length)
-            {
-                _currentCofee = recept.ResultItem;
-                break;
-            }
+            if (correctItems != recipe.RequestItems.Length) continue;
+            
+            _currentCoffee = recipe.ResultItem;
+            break;
         }
     }
 
-    private void OnMouseDown()
-    {
+    private void OnMouseDown() {
         gameObject.layer = 2;
     }
 
-    private void OnMouseDrag()
-    {
+    private void OnMouseDrag() {
         transform.position = new Vector3(MouseUtils.GetMouseWorld2DPosition().x, MouseUtils.GetMouseWorld2DPosition().y, transform.position.z);
     }
 
-    private void OnMouseExit()
-    {
+    private void OnMouseExit() {
         gameObject.layer = 0;
     }
 
-    private void OnMouseUp()
-    {
+    private void OnMouseUp() {
         gameObject.layer = 2;
 
-        if (!MouseUtils.TryRaycast2DToMousePosition(out var raycastHit2D)) { gameObject.layer = 0; return; }
+        if (!MouseUtils.TryRaycast2DToMousePosition(out var raycastHit2D)) {
+            gameObject.layer = 0;
+            return;
+        }
 
-        if (raycastHit2D.collider.TryGetComponent<TransformCraftObject>(out var transformCraftObject))
-        {
+        if (raycastHit2D.collider.TryGetComponent<TransformCraftObject>(out var transformCraftObject)) {
             transformCraftObject.TransformObject(gameObject);
             gameObject.layer = 0;
         }
 
-        if (raycastHit2D.collider.TryGetComponent<Customer>(out var customer))
-        {
-            CraftCofee();
+        if (raycastHit2D.collider.TryGetComponent<Customer>(out var customer)) {
+            CraftCoffee();
 
-            customer.task.AddItem(_currentCofee);
+            customer.task.AddItem(_currentCoffee);
 
-            for (int i = 0; i < _syrups.Count; i++)
-            {
-                customer.task.AddItem(_syrups[i]);
+            foreach (var syrup in _syrups) {
+                customer.task.AddItem(syrup);
             }
 
-            for (int i = 0; i < _poddings.Count; i++)
-            {
-                customer.task.AddItem(_poddings[i]);
+            foreach (var topping in _toppings) {
+                customer.task.AddItem(topping);
             }
 
             gameObject.layer = 0;
-            customer.Leave();
-            
+            customer.TryLeave();
+
             Destroy(gameObject);
         }
         gameObject.layer = 0;
     }
 
-    public List<ItemSO> GetItems()
-    {
+    public List<ItemSO> GetItems() {
         return _items;
     }
 
-    public List<ItemSO> GetSyrups()
-    {
+    public List<ItemSO> GetSyrups() {
         return _syrups;
     }
 
-    public List<ItemSO> GetPoddings()
-    {
-        return _poddings;
+    public List<ItemSO> GetToppings() {
+        return _toppings;
     }
 }

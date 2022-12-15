@@ -30,10 +30,12 @@ public class SpecialCustomer : Customer {
         }
     }
 
-    public override void Leave() {
+    public override void TryLeave() {
+        if(!task.completed) return;
+
         if (data.hasSecondDialogue) {
             
-            if (task.completed) {
+            if (task.correct) {
                 DialogueManager.Singleton.OrderDoneCorrectly();
             }
 
@@ -43,7 +45,7 @@ public class SpecialCustomer : Customer {
             data.hasSecondDialogue = false;
         }
         
-        base.Leave();
+        base.TryLeave();
     }
 
     private ArticyObject GetDialogue() {

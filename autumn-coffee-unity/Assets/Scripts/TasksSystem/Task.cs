@@ -1,51 +1,43 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-[System.Serializable]
-public class Task 
-{
+[Serializable]
+public class Task {
+    private Customer _customer;
+
     public bool completed;
-    private Customer customer;
+    public bool correct;
 
-    public int TskNum;
-    public float Duration;
+    public HashSet<ItemSO> Order = new HashSet<ItemSO>();
+    private HashSet<ItemSO> OrderInProgress = new HashSet<ItemSO>();
 
-    public List<Dish> Dish = new List<Dish>();
-
-    public Action OnTaskCompleteEvent;
-
-    public void AddItem(ItemSO item)
-    {
-        for (int i = 0; i < Dish.Count; i++)
-        {
-            if (item == Dish[i].Item)
-            {
-                Dish[i]._isHave = true;
-                break;
-            }
-        }
+    public void AddItem(ItemSO item) {
+        OrderInProgress.Add(item);
 
         CheckComplete();
     }
 
-    private void CheckComplete()
-    {
-        bool isComplete = true;
+    private void CheckComplete() {
+        if (Order.All(t => t.type != ItemType.Coffee)) return;
+        
+        completed = OrderInProgress.Count >= Order.Count;
 
-        for (int i = 0; i < Dish.Count; i++)
-        {
-            if (!Dish[i]._isHave) isComplete = false;
-        }
-
-        if (isComplete) { OnTaskCompleteEvent?.Invoke(); completed = true; }
+        if (completed) CheckCorrect();
     }
 
-    public Customer Owner(Customer c = null)
-    {
-        if (c) customer = c;
-        return customer;
+    private void CheckCorrect() {
+        if (Order.Count != OrderInProgress.Count) return;
+
+        correct = Order.SetEquals(OrderInProgress);
+    }
+
+
+
+    public Customer Owner(Customer c = null) {
+        if (c) _customer = c;
+        return _customer;
     }
 }
-

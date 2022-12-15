@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = nameof(ReceptSO), menuName = EditorConstants.Data + nameof(ReceptSO))]
-public class ReceptSO : ScriptableObject
+[CreateAssetMenu(fileName = nameof(RecipeSO), menuName = EditorConstants.Data + nameof(RecipeSO))]
+public class RecipeSO : ScriptableObject
 {
     public ItemSO[] RequestItems;
     public ItemSO ResultItem;

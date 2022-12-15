@@ -153,7 +153,7 @@ MonoBehaviour:
   _duration: 0.2
   _vibratio: 2
   _elastic: 0.2
-  _recepts:
+  recipes:
   - {fileID: 11400000, guid: 0c9b310edebd2c54db2c3ae441ad1151, type: 2}
   - {fileID: 11400000, guid: 10d043070006e5b478aeec1aa412815c, type: 2}
   - {fileID: 11400000, guid: 3a602392269946f498e69a2ab23ad648, type: 2}
