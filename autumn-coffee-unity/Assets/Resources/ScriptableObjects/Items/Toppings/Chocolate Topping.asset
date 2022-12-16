@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd937998f126f334bb40e848b2cdf9b4, type: 3}
   m_Name: Chocolate Topping
   m_EditorClassIdentifier: 
-  Icon: {fileID: 118348229, guid: fd2c6a791cde13b4db1de8766ec5a897, type: 3}
-  Name: Chocolate Topping
-  Description: 
-  Cost: 15
-  IsSyrup: 0
-  IsTopping: 1
-  IsDessert: 0
+  icon: {fileID: 0}
+  itemName: Chocolate Topping
+  description: 
+  cost: 0
+  type: 2
