@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd937998f126f334bb40e848b2cdf9b4, type: 3}
   m_Name: VanillaIceCream
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: f5ea5a6af46b00244834e87005fecea3, type: 3}
   itemName: Vanilla Ice Cream
   description: 
-  cost: 0
+  cost: 40
   type: 1

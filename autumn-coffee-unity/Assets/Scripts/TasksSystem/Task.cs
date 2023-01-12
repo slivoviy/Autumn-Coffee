@@ -12,10 +12,10 @@ public class Task {
     public bool correct;
 
     public HashSet<ItemSO> Order = new HashSet<ItemSO>();
-    private HashSet<ItemSO> OrderInProgress = new HashSet<ItemSO>();
+    private HashSet<ItemSO> _orderInProgress = new HashSet<ItemSO>();
 
     public void AddItem(ItemSO item) {
-        OrderInProgress.Add(item);
+        _orderInProgress.Add(item);
 
         CheckComplete();
     }
@@ -23,18 +23,20 @@ public class Task {
     private void CheckComplete() {
         if (Order.All(t => t.type != ItemType.Coffee)) return;
         
-        completed = OrderInProgress.Count >= Order.Count;
+        completed = _orderInProgress.Count >= Order.Count;
 
         if (completed) CheckCorrect();
     }
 
     private void CheckCorrect() {
-        if (Order.Count != OrderInProgress.Count) return;
+        if (Order.Count != _orderInProgress.Count) return;
 
-        correct = Order.SetEquals(OrderInProgress);
+        correct = Order.SetEquals(_orderInProgress);
     }
 
-
+    public bool IsItemInOrder(ItemSO item) {
+        return _orderInProgress.Contains(item);
+    }
 
     public Customer Owner(Customer c = null) {
         if (c) _customer = c;

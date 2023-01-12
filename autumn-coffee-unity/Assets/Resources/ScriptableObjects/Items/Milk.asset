@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd937998f126f334bb40e848b2cdf9b4, type: 3}
   m_Name: Milk
   m_EditorClassIdentifier: 
-  Icon: {fileID: 985544506, guid: 66b13345a710ac64d89ed5134c4c579f, type: 3}
-  Name: Milk
-  Description: 
-  Cost: 2
-  IsSyrup: 0
-  IsTopping: 0
-  IsDessert: 0
+  icon: {fileID: 985544506, guid: 66b13345a710ac64d89ed5134c4c579f, type: 3}
+  itemName: 
+  description: 
+  cost: 3
+  type: 0

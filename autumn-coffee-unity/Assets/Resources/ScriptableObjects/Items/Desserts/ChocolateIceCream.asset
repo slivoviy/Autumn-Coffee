@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd937998f126f334bb40e848b2cdf9b4, type: 3}
-  m_Name: ChocholateIceCream
+  m_Name: ChocolateIceCream
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: c757b238a4e07374e930e3148d1b7599, type: 3}
   itemName: Chocolate Ice Cream
   description: 
-  cost: 0
+  cost: 40
   type: 1

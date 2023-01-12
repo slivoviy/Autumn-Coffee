@@ -85,6 +85,8 @@ public class CraftObject : AnimationObject {
             foreach (var topping in _toppings) {
                 customer.task.AddItem(topping);
             }
+            
+            customer.ReloadUI();
 
             gameObject.layer = 0;
             customer.TryLeave();

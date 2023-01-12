@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd937998f126f334bb40e848b2cdf9b4, type: 3}
   m_Name: Chocolate Muffin
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 35984246800b86246be603b8fc7b9723, type: 3}
   itemName: Chocolate Muffin
   description: 
-  cost: 0
+  cost: 40
   type: 1

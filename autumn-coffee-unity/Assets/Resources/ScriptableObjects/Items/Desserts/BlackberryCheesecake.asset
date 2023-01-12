@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd937998f126f334bb40e848b2cdf9b4, type: 3}
-  m_Name: Blackberry Cheesecake
+  m_Name: BlackberryCheesecake
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 81c15510587ac614fb7f46ef52fe8c1b, type: 3}
   itemName: Blackberry Cheesecake
   description: 
-  cost: 0
+  cost: 40
   type: 1

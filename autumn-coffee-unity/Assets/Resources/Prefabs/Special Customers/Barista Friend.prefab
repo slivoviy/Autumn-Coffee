@@ -1171,9 +1171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   task:
     completed: 0
-    TskNum: 0
-    Duration: 0
-    Dish: []
+    correct: 0
   TimeToWait: 40
   MinChangeTime: 5
   MaxChangeTime: 15
@@ -1189,6 +1187,7 @@ MonoBehaviour:
   _maxRandom: 15
   _constantMoney: 20
   _Pos: 0
+  _isTaskCreated: 0
   data: {fileID: 11400000, guid: 24e7fc0f178528544a236a2d946ed251, type: 2}
 --- !u!1 &8631082171572291196
 GameObject:

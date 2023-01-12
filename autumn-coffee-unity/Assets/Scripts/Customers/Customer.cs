@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using Articy.Unity;
 using UnityEngine;
 using Ruinum.Core;
 using TMPro;
@@ -40,10 +38,10 @@ public class Customer : Executable {
         task = TaskManager.Singleton.CreateTask(this);
         _isTaskCreated = true;
 
-        InitializeTaskUI();
+        ReloadUI();
     }
 
-    protected void InitializeTaskUI() {
+    public void ReloadUI() {
         _orderBubble.SetActive(true);
 
         //0 - coffee; 1 - syrup; 2 - topping; 3-4 - dessert
@@ -51,25 +49,25 @@ public class Customer : Executable {
         foreach (var item in task.Order) {
             switch (item.type) {
                 case ItemType.Coffee:
-                    _bubbleTextComponents[0].gameObject.SetActive(true);
+                    _bubbleTextComponents[0].gameObject.SetActive(!task.IsItemInOrder(item));
                     _bubbleTextComponents[0].text = item.itemName;
                     break;
                 case ItemType.Syrup:
-                    _bubbleTextComponents[1].gameObject.SetActive(true);
+                    _bubbleTextComponents[1].gameObject.SetActive(!task.IsItemInOrder(item));
                     _bubbleTextComponents[1].text = "- " + item.itemName;
                     break;
                 case ItemType.Topping:
-                    _bubbleTextComponents[2].gameObject.SetActive(true);
+                    _bubbleTextComponents[2].gameObject.SetActive(!task.IsItemInOrder(item));
                     _bubbleTextComponents[2].text = "- " + item.itemName;
                     break;
                 case ItemType.Dessert:
                     if (!hasDessert) {
-                        _bubbleTextComponents[3].gameObject.SetActive(true);
+                        _bubbleTextComponents[3].gameObject.SetActive(!task.IsItemInOrder(item));
                         _bubbleTextComponents[3].text = item.itemName;
                         hasDessert = true;
                     }
                     else {
-                        _bubbleTextComponents[4].gameObject.SetActive(true);
+                        _bubbleTextComponents[4].gameObject.SetActive(!task.IsItemInOrder(item));
                         _bubbleTextComponents[4].text = item.itemName;
                     }
                     break;

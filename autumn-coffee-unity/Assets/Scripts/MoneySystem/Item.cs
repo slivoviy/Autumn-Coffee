@@ -2,7 +2,7 @@ using Ruinum.Utils;
 using UnityEngine;
 
 
-public partial class Item : AnimationObject {
+public class Item : AnimationObject {
     [SerializeField] private ItemSO _itemSO;
     [SerializeField] GameObject _hintCanvas;
 
@@ -40,6 +40,7 @@ public partial class Item : AnimationObject {
 
         if (raycastHit2D.collider.TryGetComponent<Customer>(out var customer)) {
             customer.task.AddItem(_itemSO);
+            customer.ReloadUI();
 
             AnimationPunch();
 

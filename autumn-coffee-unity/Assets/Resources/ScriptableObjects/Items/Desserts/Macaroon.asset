@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd937998f126f334bb40e848b2cdf9b4, type: 3}
   m_Name: Macaroon
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 78e07089b228a2a43b7d5fed55436227, type: 3}
   itemName: Macaroon
   description: 
-  cost: 0
+  cost: 40
   type: 1

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd937998f126f334bb40e848b2cdf9b4, type: 3}
   m_Name: Croissant
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: aaef987a89af40a4488eeb0d565b5d5b, type: 3}
   itemName: Croissant
   description: 
-  cost: 0
+  cost: 40
   type: 1

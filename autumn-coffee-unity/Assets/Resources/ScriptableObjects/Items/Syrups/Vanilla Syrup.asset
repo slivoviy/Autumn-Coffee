@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd937998f126f334bb40e848b2cdf9b4, type: 3}
   m_Name: Vanilla Syrup
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 62258364, guid: 160e0588802b8fb42a02461544c49d08, type: 3}
   itemName: Vanilla Syrup
   description: 
-  cost: 0
+  cost: 10
   type: 3

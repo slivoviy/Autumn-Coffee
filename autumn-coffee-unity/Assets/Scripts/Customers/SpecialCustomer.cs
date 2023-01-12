@@ -26,7 +26,7 @@ public class SpecialCustomer : Customer {
             
             _isTaskCreated = true;
 
-            InitializeTaskUI();
+            ReloadUI();
         }
     }
 
