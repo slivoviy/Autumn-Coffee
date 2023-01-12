@@ -1,4 +1,5 @@
 using Ruinum.Utils;
+using TMPro;
 using UnityEngine;
 
 
@@ -12,6 +13,7 @@ public class Item : AnimationObject {
         _startPosition = transform.position;
 
         _hintCanvas.SetActive(false);
+        _hintCanvas.transform.Find("Text (TMP)").gameObject.GetComponent<TextMeshProUGUI>().text = _itemSO.itemName;
     }
 
     private void OnMouseDown() {

@@ -37,14 +37,9 @@ public class CraftObject : AnimationObject {
 
     private void CraftCoffee() {
         foreach (var recipe in recipes) {
-            if (recipe.RequestItems.Length != _items.Count) continue;
-            
-            var correctItems = recipe.RequestItems.Where((item, i) => item == _items[i]).Count();
+            _currentCoffee = recipe.CheckEquality(_items) ? recipe.ResultItem : null;
 
-            if (correctItems != recipe.RequestItems.Length) continue;
-            
-            _currentCoffee = recipe.ResultItem;
-            break;
+            if (_currentCoffee != null) break;
         }
     }
 

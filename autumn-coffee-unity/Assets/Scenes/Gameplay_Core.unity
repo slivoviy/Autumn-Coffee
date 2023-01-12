@@ -396,8 +396,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.5
-  m_fontSizeBase: 0.5
+  m_fontSize: 0.4
+  m_fontSizeBase: 0.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1095,8 +1095,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.5
-  m_fontSizeBase: 0.5
+  m_fontSize: 0.4
+  m_fontSizeBase: 0.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1241,7 +1241,7 @@ GameObject:
   - component: {fileID: 237922569}
   - component: {fileID: 237922568}
   m_Layer: 0
-  m_Name: Chocholate_IceCream
+  m_Name: Chocholate Ice Cream
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1277,7 +1277,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14919811, y: 0.05729115}
+  m_Offset: {x: -0.14122581, y: 0.05729115}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1288,7 +1288,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0287241, y: 1.1145823}
+  m_Size: {x: 1.4592438, y: 1.1145823}
   m_EdgeRadius: 0
 --- !u!114 &237922569
 MonoBehaviour:
@@ -1505,7 +1505,7 @@ GameObject:
   - component: {fileID: 250058612}
   - component: {fileID: 250058611}
   m_Layer: 0
-  m_Name: Makaron
+  m_Name: Macaroon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1541,7 +1541,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14919811, y: 0.05729115}
+  m_Offset: {x: -0.14919806, y: 0.05729115}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1552,7 +1552,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0287241, y: 1.1145823}
+  m_Size: {x: 1.4751883, y: 1.1145823}
   m_EdgeRadius: 0
 --- !u!114 &250058612
 MonoBehaviour:
@@ -2251,7 +2251,7 @@ GameObject:
   - component: {fileID: 459033377}
   - component: {fileID: 459033376}
   m_Layer: 0
-  m_Name: BlackberryCheesecake
+  m_Name: Blackberry Cheesecake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2287,7 +2287,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14919811, y: 0.05729115}
+  m_Offset: {x: -0.14919853, y: 0.05729115}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2298,7 +2298,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0287241, y: 1.1145823}
+  m_Size: {x: 1.4432983, y: 1.1145823}
   m_EdgeRadius: 0
 --- !u!114 &459033377
 MonoBehaviour:
@@ -2760,8 +2760,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.5
-  m_fontSizeBase: 0.5
+  m_fontSize: 0.4
+  m_fontSizeBase: 0.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4258,8 +4258,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.5
-  m_fontSizeBase: 0.5
+  m_fontSize: 0.4
+  m_fontSizeBase: 0.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5433,8 +5433,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.5
-  m_fontSizeBase: 0.5
+  m_fontSize: 0.4
+  m_fontSizeBase: 0.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6262,7 +6262,7 @@ GameObject:
   - component: {fileID: 1341044978}
   - component: {fileID: 1341044977}
   m_Layer: 0
-  m_Name: Cheescake
+  m_Name: Cheesecake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6298,7 +6298,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14919811, y: 0.05729115}
+  m_Offset: {x: -0.14122558, y: 0.05729115}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6309,7 +6309,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0287241, y: 1.1145823}
+  m_Size: {x: 1.4592433, y: 1.1145823}
   m_EdgeRadius: 0
 --- !u!114 &1341044978
 MonoBehaviour:
@@ -7282,7 +7282,7 @@ GameObject:
   - component: {fileID: 1501893146}
   - component: {fileID: 1501893145}
   m_Layer: 0
-  m_Name: Maffin
+  m_Name: Muffin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7318,7 +7318,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14919811, y: 0.05729115}
+  m_Offset: {x: -0.12528026, y: 0.05729115}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7329,7 +7329,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0287241, y: 1.1145823}
+  m_Size: {x: 1.4592435, y: 1.1145823}
   m_EdgeRadius: 0
 --- !u!114 &1501893146
 MonoBehaviour:
@@ -9434,8 +9434,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.5
-  m_fontSizeBase: 0.5
+  m_fontSize: 0.4
+  m_fontSizeBase: 0.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9496,7 +9496,7 @@ GameObject:
   - component: {fileID: 1890022823}
   - component: {fileID: 1890022822}
   m_Layer: 0
-  m_Name: Vanilla_IceCream
+  m_Name: Vanilla Ice Cream
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9532,7 +9532,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14919811, y: 0.05729115}
+  m_Offset: {x: -0.14122558, y: 0.05729115}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -9543,7 +9543,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0287241, y: 1.1145823}
+  m_Size: {x: 1.4592433, y: 1.1145823}
   m_EdgeRadius: 0
 --- !u!114 &1890022823
 MonoBehaviour:
@@ -10158,7 +10158,7 @@ GameObject:
   - component: {fileID: 1959661776}
   - component: {fileID: 1959661775}
   m_Layer: 0
-  m_Name: Cruassan
+  m_Name: Croissant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10194,7 +10194,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14919811, y: 0.05729115}
+  m_Offset: {x: -0.14919782, y: 0.041346073}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -10205,7 +10205,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0287241, y: 1.1145823}
+  m_Size: {x: 1.4751887, y: 0.82756925}
   m_EdgeRadius: 0
 --- !u!114 &1959661776
 MonoBehaviour:
@@ -10989,8 +10989,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.5
-  m_fontSizeBase: 0.5
+  m_fontSize: 0.4
+  m_fontSizeBase: 0.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
