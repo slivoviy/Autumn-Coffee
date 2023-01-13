@@ -8,30 +8,26 @@ using UnityEngine;
 public class Task {
     private Customer _customer;
 
-    public bool completed;
-    public bool correct;
-
     public HashSet<ItemSO> Order = new HashSet<ItemSO>();
     private HashSet<ItemSO> _orderInProgress = new HashSet<ItemSO>();
 
     public void AddItem(ItemSO item) {
         _orderInProgress.Add(item);
-
-        CheckComplete();
     }
 
-    private void CheckComplete() {
-        if (Order.All(t => t.type != ItemType.Coffee)) return;
+    public bool CheckComplete() {
+        if (Order.All(t => t.type != ItemType.Coffee)) return false;
         
-        completed = _orderInProgress.Count >= Order.Count;
+        var completed = _orderInProgress.Count >= Order.Count;
 
         if (completed) CheckCorrect();
+
+        return completed;
     }
 
-    private void CheckCorrect() {
-        if (Order.Count != _orderInProgress.Count) return;
+    public bool CheckCorrect() {
+        return Order.Count == _orderInProgress.Count && Order.SetEquals(_orderInProgress);
 
-        correct = Order.SetEquals(_orderInProgress);
     }
 
     public bool IsItemInOrder(ItemSO item) {

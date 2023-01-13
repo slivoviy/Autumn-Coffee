@@ -79,13 +79,13 @@ public class Customer : Executable {
     }
 
     public virtual void TryLeave() {
-        if (!task.completed && _timerToLeave.GetCurrentTime() > 0) return;
+        if (!task.CheckComplete() && _timerToLeave.GetCurrentTime() > 0) return;
 
         CustomersSystem.Singleton.CustomerLeave(gameObject);
 
         var randomMoney = (int)(Random.Range(_minRandom, _maxRandom) + _constantMoney);
 
-        if (task.correct) MoneySystem.Singleton.AddAmount(randomMoney);
+        if (task.CheckCorrect()) MoneySystem.Singleton.AddAmount(randomMoney);
 
         GameManager.Singleton.RemoveExecuteObject(this);
 
@@ -93,10 +93,12 @@ public class Customer : Executable {
     }
 
     private void OnMouseDown() {
+        if(clicked) return;
+
         clicked = true;
 
         AddTask();
-
+        
         TimeToWait += Random.Range(MinChangeTime, MaxChangeTime);
         _timerToLeave = TimerManager.Singleton.StartTimer(TimeToWait, TryLeave);
     }

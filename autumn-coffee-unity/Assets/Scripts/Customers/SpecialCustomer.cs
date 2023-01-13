@@ -31,11 +31,11 @@ public class SpecialCustomer : Customer {
     }
 
     public override void TryLeave() {
-        if(!task.completed) return;
+        if(!task.CheckComplete()) return;
 
         if (data.hasSecondDialogue) {
             
-            if (task.correct) {
+            if (task.CheckCorrect()) {
                 DialogueManager.Singleton.OrderDoneCorrectly();
             }
 
