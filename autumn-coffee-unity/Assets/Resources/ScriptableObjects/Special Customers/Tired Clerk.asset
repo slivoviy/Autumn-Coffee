@@ -14,18 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerName: TiredClerk
   tasks:
-  - completed: 0
-    TskNum: 0
-    Duration: 0
-    Dish:
-    - Item: {fileID: 11400000, guid: 8456186365b5446468f916029a69c348, type: 2}
-      _isHave: 0
-  - completed: 0
-    TskNum: 0
-    Duration: 0
-    Dish:
-    - Item: {fileID: 11400000, guid: 8456186365b5446468f916029a69c348, type: 2}
-      _isHave: 0
+  - Order:
+    - {fileID: 11400000, guid: 8456186365b5446468f916029a69c348, type: 2}
+  - Order:
+    - {fileID: 11400000, guid: 8456186365b5446468f916029a69c348, type: 2}
   dialogues:
   - instanceId: 0
     referencingMode: 0

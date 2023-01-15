@@ -8,8 +8,8 @@ using UnityEngine;
 public class Task {
     private Customer _customer;
 
-    public HashSet<ItemSO> Order = new HashSet<ItemSO>();
-    private HashSet<ItemSO> _orderInProgress = new HashSet<ItemSO>();
+    public List<ItemSO> Order = new List<ItemSO>();
+    private List<ItemSO> _orderInProgress = new List<ItemSO>();
 
     public void AddItem(ItemSO item) {
         _orderInProgress.Add(item);
@@ -26,7 +26,7 @@ public class Task {
     }
 
     public bool CheckCorrect() {
-        return Order.Count == _orderInProgress.Count && Order.SetEquals(_orderInProgress);
+        return Order.Count == _orderInProgress.Count && Order.All(_orderInProgress.Contains);
 
     }
 
