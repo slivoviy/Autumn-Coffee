@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ruinum.Core;
 using TMPro;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class Customer : Executable {
@@ -22,21 +23,21 @@ public class Customer : Executable {
     [HideInInspector] public int _Pos;
 
     private Timer _timerToLeave;
-    public bool _isTaskCreated;
-    private bool clicked;
+    [HideInInspector] public bool isTaskCreated;
+    private bool _clicked;
 
 
     public override void Execute() {
-        if (clicked) {
+        if (_clicked) {
             patienceMeter.sizeDelta = new Vector2(_timerToLeave.GetCurrentTime() / TimeToWait * 3, 0.5f);
         }
     }
 
     protected virtual void AddTask() {
-        if (_isTaskCreated) return;
+        if (isTaskCreated) return;
 
         task = TaskManager.Singleton.CreateTask(this);
-        _isTaskCreated = true;
+        isTaskCreated = true;
 
         ReloadUI();
     }
@@ -46,7 +47,7 @@ public class Customer : Executable {
 
         //0 - coffee; 1 - syrup; 2 - topping; 3-4 - dessert
         var hasDessert = false;
-        foreach (var item in task.Order) {
+        foreach (var item in task.order) {
             switch (item.type) {
                 case ItemType.Coffee:
                     _bubbleTextComponents[0].gameObject.SetActive(!task.IsItemInOrder(item));
@@ -93,9 +94,9 @@ public class Customer : Executable {
     }
 
     private void OnMouseDown() {
-        if(clicked) return;
+        if(_clicked) return;
 
-        clicked = true;
+        _clicked = true;
 
         AddTask();
         

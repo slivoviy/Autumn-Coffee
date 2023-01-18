@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Barista Friend
   m_EditorClassIdentifier: 
   customerName: BaristaFriend
-  tasks: []
+  tasks:
+  - Order:
+    - {fileID: 11400000, guid: 527025a975016934abe31bb79affc29e, type: 2}
+    - {fileID: 11400000, guid: 92e4a547abfc09947a6ee41b5ce55f7b, type: 2}
+    - {fileID: 11400000, guid: 8b07700340ef9694dae51892334ce652, type: 2}
   dialogues:
   - instanceId: 0
     referencingMode: 0
@@ -24,4 +28,4 @@ MonoBehaviour:
     lowId: 319
     highId: 16777216
   ordersNumber: 1
-  hasSecondDialogue: 0
+  hasSecondDialogue: 1

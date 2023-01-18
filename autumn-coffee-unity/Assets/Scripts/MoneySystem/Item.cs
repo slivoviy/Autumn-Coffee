@@ -35,7 +35,7 @@ public class Item : AnimationObject {
 
             AnimationPunch();
 
-            MoneySystem.Singleton.SubtractAmount(_itemSO);
+            if (_itemSO.cost > 0) MoneySystem.Singleton.SubtractAmount(_itemSO);
 
             RefreshSettings();
         }
@@ -46,7 +46,7 @@ public class Item : AnimationObject {
 
             AnimationPunch();
 
-            if(_itemSO.type != ItemType.Coffee) MoneySystem.Singleton.SubtractAmount(_itemSO);
+            if(_itemSO.type != ItemType.Coffee && _itemSO.cost > 0) MoneySystem.Singleton.SubtractAmount(_itemSO);
 
             RefreshSettings();
 

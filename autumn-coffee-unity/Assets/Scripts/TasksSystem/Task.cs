@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [Serializable]
 public class Task {
     private Customer _customer;
 
-    public List<ItemSO> Order = new List<ItemSO>();
+    public List<ItemSO> order = new List<ItemSO>();
     private List<ItemSO> _orderInProgress = new List<ItemSO>();
 
     public void AddItem(ItemSO item) {
@@ -16,9 +17,9 @@ public class Task {
     }
 
     public bool CheckComplete() {
-        if (Order.All(t => t.type != ItemType.Coffee)) return false;
+        if (order.All(t => t.type != ItemType.Coffee)) return false;
         
-        var completed = _orderInProgress.Count >= Order.Count;
+        var completed = _orderInProgress.Count >= order.Count;
 
         if (completed) CheckCorrect();
 
@@ -26,7 +27,11 @@ public class Task {
     }
 
     public bool CheckCorrect() {
-        return Order.Count == _orderInProgress.Count && Order.All(_orderInProgress.Contains);
+        order.Sort((lhs, rhs) => string.CompareOrdinal(lhs.itemName, rhs.itemName));
+        _orderInProgress.Sort((lhs, rhs) => string.CompareOrdinal(lhs.itemName, rhs.itemName));
+        
+        Debug.Log(order.SequenceEqual(_orderInProgress));
+        return order.SequenceEqual(_orderInProgress);
 
     }
 

@@ -37,7 +37,7 @@ namespace DialogueSystem {
 
             dialogueBox.SetActive(false);
 
-            if (Singleton.currentCustomer._isTaskCreated) return;
+            if (Singleton.currentCustomer.isTaskCreated) return;
             Singleton.currentCustomer.SetTask();
         }
 
@@ -79,8 +79,7 @@ namespace DialogueSystem {
         }
 
         public void OrderDoneCorrectly() {
-            if (Singleton.currentCustomer.data.customerName == "Reviewer" ||
-                Singleton.currentCustomer.data.customerName == "BaristaFriend") {
+            if (Singleton.currentCustomer.data.customerName is "Reviewer" or "BaristaFriend") {
                 flowPlayer.GlobalVariables.SetVariableByString(
                     Singleton.currentCustomer.data.customerName + ".OrderDoneCorrectly", true);
             }

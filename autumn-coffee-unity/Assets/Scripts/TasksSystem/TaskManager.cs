@@ -22,15 +22,15 @@ public class TaskManager : BaseSingleton<TaskManager> {
         task.Owner(customer);
         var difficulty = GetDifficulty();
 
-        task.Order.Add(AddItem(_coffee));
+        task.order.Add(AddItem(_coffee));
 
         for (var i = 1; i < difficulty; i++) {
             ItemSO item;
             do {
                 item = AddItem(_items);
-            } while(task.Order.Any(it => it.type == item.type));
+            } while(task.order.Any(it => it.type == item.type));
             
-            task.Order.Add(item);
+            task.order.Add(item);
         }
 
         return task;

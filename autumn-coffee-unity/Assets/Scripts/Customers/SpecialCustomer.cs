@@ -17,14 +17,14 @@ public class SpecialCustomer : Customer {
     }
 
     protected override void AddTask() {
-        if (_isTaskCreated) return;
+        if (isTaskCreated) return;
         
         if(data.tasks.Count == 0) base.AddTask();
         else {
             task = data.tasks[0];
             data.tasks.RemoveAt(0);
             
-            _isTaskCreated = true;
+            isTaskCreated = true;
 
             ReloadUI();
         }
