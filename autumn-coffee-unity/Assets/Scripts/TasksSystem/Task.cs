@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Customers;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -30,7 +31,10 @@ public class Task {
         order.Sort((lhs, rhs) => string.CompareOrdinal(lhs.itemName, rhs.itemName));
         _orderInProgress.Sort((lhs, rhs) => string.CompareOrdinal(lhs.itemName, rhs.itemName));
         
-        Debug.Log(order.SequenceEqual(_orderInProgress));
+        var log = _orderInProgress.Aggregate("", (current, item) => current + $"{item.itemName} ");
+        Debug.Log($"Checking equality of list: {log}");
+        Debug.Log($"Equality is: {order.SequenceEqual(_orderInProgress)}");
+        
         return order.SequenceEqual(_orderInProgress);
 
     }

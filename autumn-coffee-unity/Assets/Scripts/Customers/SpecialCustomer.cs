@@ -1,5 +1,8 @@
 using Articy.Unity;
+using Customers;
 using DialogueSystem;
+using Gameplay.ScriptableObjects;
+using Ruinum.Core;
 using UnityEngine;
 
 public class SpecialCustomer : Customer {
@@ -11,7 +14,11 @@ public class SpecialCustomer : Customer {
 
     private new void Start() {
         //Remove after tests
-        data.ordersNumber = 0;
+        data.taskNumber = 0;
+        
+        timeToWait += Random.Range(minChangeTime, maxChangeTime);
+        _timerToLeave = TimerManager.Singleton.StartTimer(timeToWait * 3, TryLeave);
+        
         
         base.Start();
     }
@@ -19,10 +26,9 @@ public class SpecialCustomer : Customer {
     protected override void AddTask() {
         if (isTaskCreated) return;
         
-        if(data.tasks.Count == 0) base.AddTask();
+        if(data.taskNumber >= data.tasks.Count) base.AddTask();
         else {
-            task = data.tasks[0];
-            data.tasks.RemoveAt(0);
+            task = data.tasks[data.taskNumber];
             
             isTaskCreated = true;
 
@@ -49,8 +55,8 @@ public class SpecialCustomer : Customer {
     }
 
     private ArticyObject GetDialogue() {
-        return data.ordersNumber < data.dialogues.Count
-            ? data.dialogues[data.ordersNumber++].GetObject()
+        return data.taskNumber < data.dialogues.Count
+            ? data.dialogues[data.taskNumber++].GetObject()
             : null;
     }
 

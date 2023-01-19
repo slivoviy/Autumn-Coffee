@@ -2,5 +2,6 @@
     Coffee,
     Dessert,
     Topping,
-    Syrup
+    Syrup,
+    Component
 }

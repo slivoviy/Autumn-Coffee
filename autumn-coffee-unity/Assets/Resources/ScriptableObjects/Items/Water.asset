@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   icon: {fileID: 1450837016, guid: 66b13345a710ac64d89ed5134c4c579f, type: 3}
-  itemName: 
+  itemName: Water
   description: 
   cost: 0
-  type: 0
+  type: 4

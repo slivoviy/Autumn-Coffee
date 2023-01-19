@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b877c992a299524f8e86678d3c8e7fa, type: 3}
   m_Name: Tired Clerk
   m_EditorClassIdentifier: 
-  customerName: TiredClerk
+  customerName: Tired Clerk
   tasks:
-  - Order:
-    - {fileID: 11400000, guid: 8456186365b5446468f916029a69c348, type: 2}
-  - Order:
-    - {fileID: 11400000, guid: 8456186365b5446468f916029a69c348, type: 2}
+  - order: []
+  - order: []
   dialogues:
   - instanceId: 0
     referencingMode: 0
@@ -27,5 +25,5 @@ MonoBehaviour:
     referencingMode: 0
     lowId: 726
     highId: 16777216
-  ordersNumber: 0
+  taskNumber: 0
   hasSecondDialogue: 0

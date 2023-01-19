@@ -286,7 +286,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5465973154901701612}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -421,11 +421,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2092085544868420916}
-  - {fileID: 957319344572851659}
-  - {fileID: 5619098819175950546}
   - {fileID: 4061213070100264947}
   - {fileID: 6627356797953309027}
   - {fileID: 54483985368299924}
+  - {fileID: 957319344572851659}
+  - {fileID: 5619098819175950546}
   m_Father: {fileID: 4014157893082297554}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -638,7 +638,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5465973154901701612}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -774,7 +774,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5465973154901701612}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -924,7 +924,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5465973154901701612}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1169,25 +1169,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a03d05b112ebba4d9c4888f43c9602d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  task:
-    completed: 0
-    correct: 0
-  TimeToWait: 40
-  MinChangeTime: 5
-  MaxChangeTime: 15
-  _orderBubble: {fileID: 3221200639715340431}
-  _bubbleTextComponents:
+  timeToWait: 30
+  minChangeTime: 0
+  maxChangeTime: 0
+  orderBubble: {fileID: 3221200639715340431}
+  bubbleTextComponents:
   - {fileID: 7809033289892687984}
   - {fileID: 3581778415825642185}
   - {fileID: 9177162705037712701}
   - {fileID: 4780592462386907065}
   - {fileID: 7719526520021904374}
   patienceMeter: {fileID: 4521912100421571468}
-  _minRandom: 5
-  _maxRandom: 15
-  _constantMoney: 20
-  _Pos: 0
-  _isTaskCreated: 0
+  minRandom: 0
+  maxRandom: 30
+  constantMoney: 20
+  task:
+    order: []
+  pos: 0
+  isTaskCreated: 0
   data: {fileID: 11400000, guid: 88be8dac4f76ce949938ee0f9b77a1f9, type: 2}
 --- !u!1 &8631082171572291196
 GameObject:
@@ -1220,7 +1219,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5465973154901701612}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}

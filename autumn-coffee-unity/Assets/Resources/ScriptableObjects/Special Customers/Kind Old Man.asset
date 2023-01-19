@@ -12,50 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b877c992a299524f8e86678d3c8e7fa, type: 3}
   m_Name: Kind Old Man
   m_EditorClassIdentifier: 
-  customerName: KindOldMan
+  customerName: Kind Old Man
   tasks:
-  - completed: 0
-    TskNum: 0
-    Duration: 0
-    Dish:
-    - Item: {fileID: 11400000, guid: 504163ce777665f418d2cb18f1c8c839, type: 2}
-      _isHave: 0
-  - completed: 0
-    TskNum: 0
-    Duration: 0
-    Dish:
-    - Item: {fileID: 11400000, guid: 504163ce777665f418d2cb18f1c8c839, type: 2}
-      _isHave: 0
-  - completed: 0
-    TskNum: 0
-    Duration: 0
-    Dish:
-    - Item: {fileID: 11400000, guid: 504163ce777665f418d2cb18f1c8c839, type: 2}
-      _isHave: 0
-  - completed: 0
-    TskNum: 0
-    Duration: 0
-    Dish:
-    - Item: {fileID: 11400000, guid: 504163ce777665f418d2cb18f1c8c839, type: 2}
-      _isHave: 0
-  - completed: 0
-    TskNum: 0
-    Duration: 0
-    Dish:
-    - Item: {fileID: 11400000, guid: 504163ce777665f418d2cb18f1c8c839, type: 2}
-      _isHave: 0
-  - completed: 0
-    TskNum: 0
-    Duration: 0
-    Dish:
-    - Item: {fileID: 11400000, guid: 504163ce777665f418d2cb18f1c8c839, type: 2}
-      _isHave: 0
-  - completed: 0
-    TskNum: 0
-    Duration: 0
-    Dish:
-    - Item: {fileID: 11400000, guid: 504163ce777665f418d2cb18f1c8c839, type: 2}
-      _isHave: 0
+  - order:
+    - {fileID: 11400000, guid: 504163ce777665f418d2cb18f1c8c839, type: 2}
   dialogues:
   - instanceId: 0
     referencingMode: 0
@@ -85,5 +45,5 @@ MonoBehaviour:
     referencingMode: 0
     lowId: 997
     highId: 16777216
-  ordersNumber: 0
+  taskNumber: 0
   hasSecondDialogue: 1

@@ -12,12 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b877c992a299524f8e86678d3c8e7fa, type: 3}
   m_Name: Evil Barista
   m_EditorClassIdentifier: 
-  customerName: 
-  tasks:
-  - order: []
-  - order: []
-  - order: []
-  - order: []
-  dialogues: []
-  ordersNumber: 0
+  customerName: Evil Barista
+  tasks: []
+  dialogues:
+  - instanceId: 0
+    referencingMode: 0
+    lowId: 371
+    highId: 16777216
+  - instanceId: 0
+    referencingMode: 0
+    lowId: 628
+    highId: 16777216
+  - instanceId: 0
+    referencingMode: 0
+    lowId: 823
+    highId: 16777216
+  - instanceId: 0
+    referencingMode: 0
+    lowId: 976
+    highId: 16777216
+  taskNumber: 0
   hasSecondDialogue: 0

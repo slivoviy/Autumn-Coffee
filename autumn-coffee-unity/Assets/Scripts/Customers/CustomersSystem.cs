@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Articy.Unity;
+using Customers;
 using UnityEngine;
 using Ruinum.Core;
 using DG.Tweening;
@@ -66,7 +67,7 @@ public class CustomersSystem : BaseSingleton<CustomersSystem> {
 
         customerGO.transform.position = startPos2;
         var customer = customerGO.GetComponent<Customer>();
-        customer._Pos = cPos;
+        customer.pos = cPos;
 
         customersCount++;
         ComeAnimation(customerGO, startPos + (transform.right * (4.5f * cPos)));
@@ -82,7 +83,7 @@ public class CustomersSystem : BaseSingleton<CustomersSystem> {
     public void CustomerLeave(GameObject customer) {
         specialExists = false;
         customersCount--;
-        Place[customer.GetComponent<Customer>()._Pos] = false;
+        Place[customer.GetComponent<Customer>().pos] = false;
         Destroy(customer);
     }
 

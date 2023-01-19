@@ -2,6 +2,7 @@ using System;
 using Ruinum.Utils;
 using System.Collections.Generic;
 using System.Linq;
+using Customers;
 using UnityEngine;
 
 
@@ -33,6 +34,8 @@ public class CraftObject : AnimationObject {
         }
 
         _items.Add(itemSO);
+        
+        Debug.Log($"Item added: {itemSO.itemName}");
     }
 
     private void CraftCoffee() {
