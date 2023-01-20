@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using Ruinum.Core;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace Customers {
@@ -13,7 +15,8 @@ namespace Customers {
         
         [Header("UI Settings")]
         [SerializeField] private GameObject orderBubble;
-        [SerializeField] private List<TextMeshProUGUI> bubbleTextComponents;
+        [SerializeField] private TextMeshProUGUI coffeeText;
+        [SerializeField] private List<Image> orderComponentsImages;
         [SerializeField] private RectTransform patienceMeter;
         
         [Header("Money Reward Settings")]
@@ -50,32 +53,31 @@ namespace Customers {
 
         public void ReloadUI() {
             orderBubble.SetActive(true);
-
-            //0 - coffee; 1 - syrup; 2 - topping; 3-4 - dessert
+            
             var hasDessert = false;
             foreach (var item in task.order) {
                 switch (item.type) {
                     case ItemType.Coffee:
-                        bubbleTextComponents[0].gameObject.SetActive(!task.IsItemInOrder(item));
-                        bubbleTextComponents[0].text = item.itemName;
+                        coffeeText.gameObject.SetActive(!task.IsItemInOrder(item));
+                        coffeeText.text = item.itemName;
                         break;
                     case ItemType.Syrup:
-                        bubbleTextComponents[1].gameObject.SetActive(!task.IsItemInOrder(item));
-                        bubbleTextComponents[1].text = "- " + item.itemName;
+                        orderComponentsImages[0].gameObject.SetActive(!task.IsItemInOrder(item));
+                        orderComponentsImages[0].sprite = item.icon;
                         break;
                     case ItemType.Topping:
-                        bubbleTextComponents[2].gameObject.SetActive(!task.IsItemInOrder(item));
-                        bubbleTextComponents[2].text = "- " + item.itemName;
+                        orderComponentsImages[1].gameObject.SetActive(!task.IsItemInOrder(item));
+                        orderComponentsImages[1].sprite = item.icon;
                         break;
                     case ItemType.Dessert:
                         if (!hasDessert) {
-                            bubbleTextComponents[3].gameObject.SetActive(!task.IsItemInOrder(item));
-                            bubbleTextComponents[3].text = item.itemName;
+                            orderComponentsImages[2].gameObject.SetActive(!task.IsItemInOrder(item));
+                            orderComponentsImages[2].sprite = item.icon;
                             hasDessert = true;
                         }
                         else {
-                            bubbleTextComponents[4].gameObject.SetActive(!task.IsItemInOrder(item));
-                            bubbleTextComponents[4].text = item.itemName;
+                            orderComponentsImages[3].gameObject.SetActive(!task.IsItemInOrder(item));
+                            orderComponentsImages[3].sprite = item.icon;
                         }
                         break;
                     default:

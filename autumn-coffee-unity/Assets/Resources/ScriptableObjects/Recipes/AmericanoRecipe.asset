@@ -15,4 +15,5 @@ MonoBehaviour:
   RequestItems:
   - {fileID: 11400000, guid: a12a0f2a4cdf10144aff3adc20442979, type: 2}
   - {fileID: 11400000, guid: 638274d2b229d27418fa0e66ed299558, type: 2}
+  - {fileID: 11400000, guid: 638274d2b229d27418fa0e66ed299558, type: 2}
   ResultItem: {fileID: 11400000, guid: 8456186365b5446468f916029a69c348, type: 2}

@@ -2609,11 +2609,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 814456942590672699, guid: 8f0d760365c07504db036a4d1b2abd06, type: 3}
       propertyPath: maxTime
-      value: 7
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 814456942590672699, guid: 8f0d760365c07504db036a4d1b2abd06, type: 3}
       propertyPath: minTime
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 814456942590672699, guid: 8f0d760365c07504db036a4d1b2abd06, type: 3}
       propertyPath: specialCustomersGO.Array.size
@@ -10696,7 +10696,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 36e49e4039773fb4591f11867957b51d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

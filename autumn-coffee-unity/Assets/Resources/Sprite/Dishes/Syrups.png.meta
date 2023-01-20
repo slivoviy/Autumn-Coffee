@@ -104,15 +104,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Syrups_0
+      name: Caramel_Syrup
       rect:
         serializedVersion: 2
-        x: 79
-        y: 44
-        width: 93
-        height: 286
+        x: 0
+        y: 0
+        width: 300
+        height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -125,15 +125,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Syrups_1
+      name: Liquer_Syrup
       rect:
         serializedVersion: 2
-        x: 189
-        y: 43
-        width: 78
-        height: 314
+        x: 280
+        y: 0
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,15 +146,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Syrups_2
+      name: Maple_Syrup
       rect:
         serializedVersion: 2
-        x: 301
-        y: 40
-        width: 115
-        height: 230
+        x: 600
+        y: 0
+        width: 240
+        height: 240
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,15 +167,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Syrups_3
+      name: Vanilla_Syrup
       rect:
         serializedVersion: 2
-        x: 446
-        y: 51
-        width: 88
-        height: 335
+        x: 840
+        y: 0
+        width: 360
+        height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Syrups_1: -1763892962
-      Syrups_3: 62258364
-      Syrups_2: 1204916796
-      Syrups_0: 2052014480
+      Liquer_Syrup: -1763892962
+      Caramel_Syrup: 2052014480
+      Maple_Syrup: 1204916796
+      Vanilla_Syrup: 62258364
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

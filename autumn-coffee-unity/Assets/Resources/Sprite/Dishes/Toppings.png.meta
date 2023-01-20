@@ -104,15 +104,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Poddings_0
+      name: Blue_Topping
       rect:
         serializedVersion: 2
-        x: 35
-        y: 210
-        width: 207
-        height: 154
+        x: 0
+        y: 220
+        width: 220
+        height: 220
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -125,15 +125,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Poddings_1
+      name: Red_Topping
       rect:
         serializedVersion: 2
-        x: 263
-        y: 211
-        width: 207
-        height: 155
+        x: 220
+        y: 220
+        width: 220
+        height: 220
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,15 +146,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Poddings_2
+      name: Chocolate_Topping
       rect:
         serializedVersion: 2
-        x: 38
-        y: 33
-        width: 207
-        height: 161
+        x: 0
+        y: 0
+        width: 220
+        height: 220
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,15 +167,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Poddings_3
+      name: Pink_Topping
       rect:
         serializedVersion: 2
-        x: 266
-        y: 28
-        width: 207
-        height: 154
+        x: 220
+        y: 0
+        width: 220
+        height: 220
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Poddings_0: -1203564519
-      Poddings_3: -1136488965
-      Poddings_2: 118348229
-      Poddings_1: -638068630
+      Chocolate_Topping: 118348229
+      Red_Topping: -638068630
+      Pink_Topping: -1136488965
+      Blue_Topping: -1203564519
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
