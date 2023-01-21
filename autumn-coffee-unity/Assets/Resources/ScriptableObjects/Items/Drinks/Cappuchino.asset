@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cappuchino
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 36e49e4039773fb4591f11867957b51d, type: 3}
-  itemName: Cappuchno
+  itemName: Cappuchino
   description: 
   cost: 0
   type: 0

@@ -6,7 +6,7 @@ using TMPro;
 
 public class ClockUI : MonoBehaviour
 {
-    public const float IRL_secs_per_ingame_day = 300f; //1 день в игре = 5 минут 300
+    public const float IRL_secs_per_ingame_day = 600f; //1 день в игре = 5 минут 300
 
     public Transform clockHourHandTransform;
     public Transform clockMinHandTransform;
