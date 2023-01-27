@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Barista Friend
   m_EditorClassIdentifier: 
   customerName: BaristaFriend
-  tasks:
-  - order: []
+  tasks: []
   dialogues:
   - instanceId: 0
     referencingMode: 0
@@ -24,5 +23,5 @@ MonoBehaviour:
     referencingMode: 0
     lowId: 319
     highId: 16777216
-  taskNumber: 1
+  taskNumber: 2
   hasSecondDialogue: 1
