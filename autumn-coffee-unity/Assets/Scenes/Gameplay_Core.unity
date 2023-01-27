@@ -6340,6 +6340,62 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 300173851, guid: dead5b7fe7cb1d3409946b956a3ce277, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442688316, guid: dead5b7fe7cb1d3409946b956a3ce277, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442688316, guid: dead5b7fe7cb1d3409946b956a3ce277, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442688316, guid: dead5b7fe7cb1d3409946b956a3ce277, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442688316, guid: dead5b7fe7cb1d3409946b956a3ce277, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 800001211, guid: dead5b7fe7cb1d3409946b956a3ce277, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 800001211, guid: dead5b7fe7cb1d3409946b956a3ce277, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 800001211, guid: dead5b7fe7cb1d3409946b956a3ce277, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 800001211, guid: dead5b7fe7cb1d3409946b956a3ce277, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 884069410, guid: dead5b7fe7cb1d3409946b956a3ce277, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 884069410, guid: dead5b7fe7cb1d3409946b956a3ce277, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 884069410, guid: dead5b7fe7cb1d3409946b956a3ce277, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 884069410, guid: dead5b7fe7cb1d3409946b956a3ce277, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 884069410, guid: dead5b7fe7cb1d3409946b956a3ce277, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8843049187299390824, guid: dead5b7fe7cb1d3409946b956a3ce277, type: 3}
       propertyPath: m_Name
       value: Dialogue Manager

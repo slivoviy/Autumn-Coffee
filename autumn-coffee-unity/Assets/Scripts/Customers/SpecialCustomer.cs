@@ -11,18 +11,6 @@ public class SpecialCustomer : Customer {
 
     private bool dialogueStarted;
 
-
-    private new void Start() {
-        //Remove after tests
-        data.taskNumber = 0;
-        
-        timeToWait += Random.Range(minChangeTime, maxChangeTime);
-        _timerToLeave = TimerManager.Singleton.StartTimer(timeToWait * 3, TryLeave);
-        
-        
-        base.Start();
-    }
-
     protected override void AddTask() {
         if (isTaskCreated) return;
         

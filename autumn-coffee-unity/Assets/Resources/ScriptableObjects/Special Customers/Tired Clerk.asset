@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerName: Tired Clerk
   tasks:
-  - order: []
-  - order: []
+  - order:
+    - {fileID: 11400000, guid: 8456186365b5446468f916029a69c348, type: 2}
+  - order:
+    - {fileID: 11400000, guid: 8456186365b5446468f916029a69c348, type: 2}
   dialogues:
   - instanceId: 0
     referencingMode: 0

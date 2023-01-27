@@ -98,6 +98,7 @@ namespace Customers {
 
             GameManager.Singleton.RemoveExecuteObject(this);
 
+            TimerManager.Singleton.DeleteTimer(_timerToLeave);
             task = null;
         }
 
