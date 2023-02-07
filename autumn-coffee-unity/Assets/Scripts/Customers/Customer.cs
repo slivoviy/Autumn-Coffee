@@ -28,18 +28,18 @@ namespace Customers {
         [HideInInspector] public int pos;
         [HideInInspector] public bool isTaskCreated;
 
-        protected Timer _timerToLeave;
+        protected Timer TimerToLeave;
         private bool _clicked;
 
         private new void Start() {
             timeToWait += Random.Range(minChangeTime, maxChangeTime);
-            _timerToLeave = TimerManager.Singleton.StartTimer(timeToWait * 3, TryLeave);
+            TimerToLeave = TimerManager.Singleton.StartTimer(timeToWait * 3, TryLeave);
             
             base.Start();
         }
 
         public override void Execute() {
-            patienceMeter.sizeDelta = _clicked ? new Vector2(_timerToLeave.GetCurrentTime() / timeToWait * 3, 0.5f) : new Vector2(_timerToLeave.GetCurrentTime() / (timeToWait * 3) * 3, 0.5f);
+            patienceMeter.sizeDelta = _clicked ? new Vector2(TimerToLeave.GetCurrentTime() / timeToWait * 3, 0.5f) : new Vector2(TimerToLeave.GetCurrentTime() / (timeToWait * 3) * 3, 0.5f);
         }
 
         protected virtual void AddTask() {
@@ -88,7 +88,7 @@ namespace Customers {
         }
 
         public virtual void TryLeave() {
-            if (!task.CheckComplete() && _timerToLeave.GetCurrentTime() > 0) return;
+            if (!task.CheckComplete() && TimerToLeave.GetCurrentTime() > 0) return;
 
             CustomersSystem.Singleton.CustomerLeave(gameObject);
 
@@ -98,7 +98,7 @@ namespace Customers {
 
             GameManager.Singleton.RemoveExecuteObject(this);
 
-            TimerManager.Singleton.DeleteTimer(_timerToLeave);
+            TimerManager.Singleton.DeleteTimer(TimerToLeave);
             task = null;
         }
 
@@ -108,8 +108,8 @@ namespace Customers {
             _clicked = true;
 
             AddTask();
-            TimerManager.Singleton.DeleteTimer(_timerToLeave);
-            _timerToLeave = TimerManager.Singleton.StartTimer(timeToWait, TryLeave);
+            TimerManager.Singleton.DeleteTimer(TimerToLeave);
+            TimerToLeave = TimerManager.Singleton.StartTimer(timeToWait, TryLeave);
         }
     }
 }

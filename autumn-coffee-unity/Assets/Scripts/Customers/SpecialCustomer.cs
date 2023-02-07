@@ -9,7 +9,17 @@ public class SpecialCustomer : Customer {
     
     [SerializeField] public SpecialCustomerSO data;
 
-    private bool dialogueStarted;
+    private bool _dialogueStarted;
+
+    public override void Start() {
+        timeToWait += Random.Range(minChangeTime, maxChangeTime);
+        TimerToLeave = TimerManager.Singleton.StartTimer(timeToWait * 3, TryLeave);
+
+        data.taskNumber = 0;
+        if (data.customerName is "BaristaFriend" or "Kind Old Man" or "Reviewer") data.hasSecondDialogue = true;
+        
+        base.Start();
+    }
 
     protected override void AddTask() {
         if (isTaskCreated) return;
@@ -49,8 +59,8 @@ public class SpecialCustomer : Customer {
     }
 
     private void OnMouseDown() {
-        if (dialogueStarted) return;
-        dialogueStarted = true;
+        if (_dialogueStarted) return;
+        _dialogueStarted = true;
         
         Time.timeScale = 0;
 
